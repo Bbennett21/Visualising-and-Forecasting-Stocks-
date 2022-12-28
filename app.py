@@ -56,7 +56,7 @@ item2 = html.Div(
           ],
         className="content")
 
-app.layout = html.Div([item1, item2])
+app.layout = html.Div(className='container', children=[item1, item2])
 
 if __name__ == '__main__': 
     app.run_server(debug=True)
