@@ -1,0 +1,24 @@
+.start {
+    font-size: 24px;
+    font-family: Oswald;
+}
+
+.container {
+    display: flex;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(186, 12, 47);
+}
+ 
