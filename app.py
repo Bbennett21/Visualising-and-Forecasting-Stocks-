@@ -14,26 +14,26 @@ item1 = html.Div(
             # stock code input
             dcc.Input(id='stock-code', type='text', placeholder='Enter stock code'),
             html.Button('Submit', id='submit-button')
-        ], className='stock-input'),
+        ], className="stock-input"),
         
         html.Div([
             # Date range picker input
             dcc.DatePickerRange(
-                id='date-range', start_date=dt(2020, 1, 1), end_date=dt.now())
+                id='date-range', start_date=dt(2020, 1, 1), end_date=dt.now(), className="date-input")
         ]),
         html.Div([
             # Stock price button
-            html.Button('Get stock price', id='stock-price-button'),
+            html.Button('Get Stock Price', id='stock-price-button'),
 
             # Indicators button
-            html.Button('Get indicators', id='indicators-button'),
+            html.Button('Get Indicators', id='indicators-button'),
 
             # Number of days of forecast input
             dcc.Input(id='forecast-days', type='number', placeholder='Enter number of days'),
 
             # Forecast button
-            html.Button('Get forecast', id='forecast-button')
-        ])
+            html.Button('Get Forecast', id='forecast-button')
+        ], className="selectors")
     ],
     className="nav")
 

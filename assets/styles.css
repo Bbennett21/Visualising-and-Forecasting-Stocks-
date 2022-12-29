@@ -1,24 +1,90 @@
-.start {
-    font-size: 24px;
-    font-family: Oswald;
+/* General styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    display: flex;
-}
-
+/* Navbar styles */
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    flex-wrap: wrap;
-    flex-flow: column wrap;
-    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgb(186, 12, 47);
+    align-items: center;
+    background-color: #333;
+    color: white;
 }
+
+.nav .start {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.nav .stock-input {
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.nav .stock-input input {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.nav .stock-input button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.nav .stock-input button:hover {
+    background-color: #0063aa;
+}
+
+.nav .date-input {
  
+    height: 40px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+
+.nav .selectors {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav .selectors button {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    margin-right: 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav .selectors button:hover {
+    background-color: #0063aa;
+}
+
+.nav .selectors input {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    margin-right: 20px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
