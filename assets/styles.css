@@ -15,14 +15,14 @@ body {
 }
 
 .nav .start {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .nav .stock-input {
     display: flex;
     align-self: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .nav .stock-input input {
@@ -38,7 +38,7 @@ body {
     width: 100px;
     height: 40px;
     font-size: 16px;
-    background-color: #0074D9;
+    background-color: #E4002B;
     color: white;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -46,11 +46,10 @@ body {
 }
 
 .nav .stock-input button:hover {
-    background-color: #0063aa;
+    background-color: #BA0C2F;
 }
 
 .nav .date-input {
- 
     height: 40px;
     font-size: 16px;
     margin-left: auto;
@@ -60,7 +59,7 @@ body {
 .nav .selectors {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .nav .selectors button {
@@ -68,7 +67,7 @@ body {
     height: 40px;
     font-size: 16px;
     margin-right: 20px;
-    background-color: #0074D9;
+    background-color: #E4002B;
     color: white;
     border: none;
     border-radius: 5px;
@@ -76,7 +75,7 @@ body {
 }
 
 .nav .selectors button:hover {
-    background-color: #0063aa;
+    background-color: #BA0C2F;
 }
 
 .nav .selectors input {
