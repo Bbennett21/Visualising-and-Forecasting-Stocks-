@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: sans-serif;
+    font-family: Georgia;
     margin: 0;
     padding: 0;
 }
@@ -15,6 +15,8 @@ body {
 }
 
 .nav .start {
+    font-family: Merriweather;
+    letter-spacing: 125%;
     font-size: 30px;
     margin-bottom: 10px;
 }
@@ -87,3 +89,48 @@ body {
     border: none;
     border-radius: 5px;
 }
+
+.content .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+  
+.content .logo {
+    height: 50px;
+    margin-right: 10px;
+    padding-right: 10px;
+
+}
+  
+.content .company-name {
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+  
+.content #description {
+   width: 80%;
+   height: 10%;
+   padding: 20px;
+   margin: 0 auto;
+   text-align: center;
+   font-family: Georgia;
+   line-height: 150%;
+}
+  
+#graphs-content, #main-content, #forecast-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+  
+.content {
+    background-color: #f1f1f1;
+    min-height: 100vh;
+}
+ 
