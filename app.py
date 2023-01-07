@@ -8,6 +8,9 @@ import yfinance as yf
 import pandas as pd
 import plotly.graph_objs as go
 import plotly.express as px
+# model
+from model import prediction
+from sklearn.svm import SVR
 
 
 app = dash.Dash(__name__, external_stylesheets=['assets\styles.css'])
@@ -142,6 +145,19 @@ def get_more(df):
     fig = px.scatter(df, x="Date", y="EWA_20", title="Exponential Moving Average vs Date")
     fig.update_traces(mode='lines+markers')
     return fig    
+
+    # callback for forecast
+@app.callback([Output("forecast-content", "children")],
+              [Input("forecast-button", "n_clicks")],
+              [State("forecast-days", "value"),
+               State("stock-code", "value")])
+def forecast(n, n_days, val):
+    if n == None:
+        return [""]
+    if val == None:
+        raise PreventUpdate
+    fig = prediction(val, int(n_days) + 1)
+    return [dcc.Graph(figure=fig)]
 
 if __name__ == '__main__':
     app.run_server(debug=True)

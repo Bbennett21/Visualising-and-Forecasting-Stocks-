@@ -94,12 +94,10 @@ def prediction(stock, n_days):
     fig = go.Figure()
     fig.add_trace(
         go.Scatter(
-            x=dates,  
-            # np.array(ten_days).flatten(), 
+            x=dates,  # np.array(ten_days).flatten(), 
             y=rbf_svr.predict(output_days),
             mode='lines+markers',
             name='data'))
-    
     fig.update_layout(
         title="Predicted Close Price of next " + str(n_days - 1) + " days",
         xaxis_title="Date",
