@@ -1,4 +1,3 @@
-# Visualising-and-Forecasting-Stocks-
 
 # Stock Prediction Web Application using Dash and Machine Learning
 
