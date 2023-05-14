@@ -66,29 +66,35 @@ item2 = html.Div(
 
 app.layout = html.Div(className='container', children=[item1, item2])
 
-# callback for company info
-@app.callback([
-    Output("description", "children"),
-    Output("logo", "src"),
-    Output("company-name", "children"),
-    Output("stock-price-button", "n_clicks"),
-    Output("indicators-button", "n_clicks"),
-    Output("forecast-button", "n_clicks")
-], [Input("submit-button", "n_clicks")], [State("stock-code", "value")])
-
-def update_data(n, val):  # input parameter(s)
-    if n == None:
+@app.callback(
+    [
+        Output("description", "children"),
+        Output("logo", "src"),
+        Output("company-name", "children"),
+        Output("stock-price-button", "n_clicks"),
+        Output("indicators-button", "n_clicks"),
+        Output("forecast-button", "n_clicks")
+    ], 
+    [Input("submit-button", "n_clicks")], 
+    [State("stock-code", "value")]
+)
+def update_data(n, val):
+    if n is None:
         return None, None, None, None, None, None
-        # raise PreventUpdate
     else:
-        if val == None:
+        if val is None:
             raise PreventUpdate
         else:
             ticker = yf.Ticker(val)
             inf = ticker.info
-            df = pd.DataFrame().from_dict(inf, orient="index").T
-            df[['logo_url', 'shortName', 'longBusinessSummary']]
-            return df['longBusinessSummary'].values[0], df['logo_url'].values[0], df['shortName'].values[0], None, None, None
+            if 'logo_url' not in inf:
+                return None, None, None, None, None, None
+            else:
+                name = inf['longName']
+                logo_url = inf['logo_url']
+                description = inf['longBusinessSummary']
+                return description, logo_url, name, None, None, None
+
 
 # callback for stocks graphs
 @app.callback([
