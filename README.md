@@ -8,8 +8,10 @@ This project aims to provide a simple yet effective tool for stock market invest
 The project structure consists of the following files:
 
 1. `app.py` - Main application file containing the Dash app instance and layout.
-2. `helpers.py` - A helper file containing functions to fetch data from the yfinance library and to train and predict stock prices using a machine learning algorithm.
-3. `requirements.txt` - A file containing all the dependencies required to run the application.
+2. `model.py` - A helper file containing functions to fetch data from the yfinance library and to train and predict stock prices using a machine learning algorithm.
+3. `assets/styles.css` - A file to style the webpage. 
+4. `requirements.txt` - A file containing all the dependencies required to run the application.
+
 
 ## Usage
 
