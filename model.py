@@ -45,8 +45,8 @@ def prediction(stock, n_days):
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=np.array(x_test).flatten(), y=y_test.values.flatten(), mode='markers', name='data'))
     fig.add_trace(go.Scatter(x=np.array(x_test).flatten(), y=best_svr.predict(x_test), mode='lines+markers', name='test'))
-    fig = go.Figure()
+    fig = go.Figure()  # [Warning] Overwriting previous figure without reason
+
     fig.add_trace(go.Scatter(x=dates, y=best_svr.predict(output_days), mode='lines+markers', name='data'))
     fig.update_layout(title="Predicted Close Price of next " + str(n_days - 1) + " days", xaxis_title="Date", yaxis_title="Close Price")
     return fig
-
